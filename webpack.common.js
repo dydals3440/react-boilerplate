@@ -81,8 +81,8 @@ module.exports = () => ({
     new DotenvWebpackPlugin(),
     sentryWebpackPlugin({
       authToken: process.env.SENTRY_AUTH_TOKEN,
-      org: 'momo2024',
-      project: 'momo-harry-test',
+      org: 'matthew',
+      project: 'matthew',
       sourcemaps: {
         filesToDeleteAfterUpload: '**/*.js.map',
       },
