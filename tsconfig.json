@@ -36,7 +36,7 @@
       "@contexts/*": ["contexts/*"]
     },
     // test
-    "types": ["jest"]
+    "types": ["node", "jest"]
   },
   "include": ["./src", "jest.setup.js"],
   "exclude": ["/node_modules/"]
