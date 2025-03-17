@@ -4,7 +4,6 @@ import useHello from '@hooks/useHello';
 
 const App = () => {
   useHello();
-  console.log(process.env.SENTRY_AUTH_TOKEN);
   return (
     <div>
       <h1>Hello, React with Webpack!</h1>

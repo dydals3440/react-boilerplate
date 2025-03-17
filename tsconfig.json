@@ -36,8 +36,8 @@
       "@contexts/*": ["contexts/*"]
     },
     // test
-    "types": ["node", "jest"]
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["./src", "jest.setup.js"],
+  "include": ["./src", "jest.setup.ts"],
   "exclude": ["/node_modules/"]
 }

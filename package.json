@@ -29,6 +29,7 @@
     "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-query": "^5.68.0",
     "@testing-library/dom": "10.3.2",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/jest": "^29.5.14",
