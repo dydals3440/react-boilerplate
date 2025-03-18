@@ -1,4 +1,3 @@
-import { PATH } from '@routers/path';
 import { createBrowserRouter } from 'react-router-dom';
 
 import MainLayout from '@layouts/MainLayout/MainLayout';
@@ -10,9 +9,11 @@ import LpListPage from '@pages/LpListPage/LpListPage';
 import SigninPage from '@pages/SigninPage/SigninPage';
 import SignupPage from '@pages/SignupPage/SignupPage';
 
+import { NAVIGATION_PATH } from '@constants/path';
+
 export const router = createBrowserRouter([
   {
-    path: PATH.home,
+    path: NAVIGATION_PATH.home,
     element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
@@ -21,19 +22,19 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: PATH.signin,
+        path: NAVIGATION_PATH.signin,
         element: <SigninPage />,
       },
       {
-        path: PATH.signup,
+        path: NAVIGATION_PATH.signup,
         element: <SignupPage />,
       },
       {
-        path: PATH.lp.list,
+        path: NAVIGATION_PATH.lp.list,
         element: <LpListPage />,
       },
       {
-        path: PATH.lp.detail,
+        path: NAVIGATION_PATH.lp.detail,
         element: <LpDetailPage />,
       },
     ],
