@@ -33,7 +33,8 @@
       "@types/*": ["types/*"],
       "@utils/*": ["utils/*"],
       "@stores/*": ["stores/*"],
-      "@contexts/*": ["contexts/*"]
+      "@contexts/*": ["contexts/*"],
+      "@routers/*": ["routers/*"],
     },
     // test
     "types": ["node", "jest", "@testing-library/jest-dom"]

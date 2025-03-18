@@ -20,5 +20,8 @@ module.exports = {
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '^@assets/(.*)$': '<rootDir>/src/assets/$1',
     '^@styles/(.*)$': '<rootDir>/src/styles/$1',
+    '^@layouts/(.*)$': '<rootDir>/src/layouts/$1',
+    '^@routers/(.*)$': '<rootDir>/src/routers/$1',
+    '^@pages/(.*)$': '<rootDir>/src/pages/$1',
   },
 };

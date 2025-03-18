@@ -1,11 +1,21 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
-import App from './App';
+import HomePage from '@pages/HomePage/HomePage';
 
-describe('App Component', () => {
-  it('should render the heading', () => {
-    const { getByText } = render(<App />);
-    const heading = getByText('Hello, React with Webpack!');
-    expect(heading).toBeInTheDocument();
+const testRoutes = [
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+];
+
+test('RouterProvider renders HomePage on index route', () => {
+  const router = createMemoryRouter(testRoutes, {
+    initialEntries: ['/'],
   });
+
+  render(<RouterProvider router={router} />);
+
+  expect(screen.getByText('Welcome Webpack Initial Setting HomePage')).toBeInTheDocument();
 });

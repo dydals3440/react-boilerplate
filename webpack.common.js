@@ -59,6 +59,7 @@ module.exports = () => ({
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@contexts': path.resolve(__dirname, 'src/contexts'),
       '@stores': path.resolve(__dirname, 'src/stores'),
+      '@routers': path.resolve(__dirname, 'src/routers'),
     },
   },
   output: {
