@@ -7,7 +7,7 @@ on:
 env:
   # GitHub 사용자 이름 → Slack ID 매핑
   ASSIGNEE_SLACK_ID: ${{ secrets.ASSIGNEE_SLACK_ID }}
-  matthew: ${{ secrets.ASSIGNEE_SLACK_ID }}
+  dydals3440: ${{ secrets.ASSIGNEE_SLACK_ID }}
 
 
 jobs:
