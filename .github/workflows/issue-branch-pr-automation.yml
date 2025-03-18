@@ -9,13 +9,21 @@ env:
   ASSIGNEE_SLACK_ID: ${{ secrets.ASSIGNEE_SLACK_ID }}
   dydals3440: ${{ secrets.ASSIGNEE_SLACK_ID }}
 
-
 jobs:
   create-issue-branch:
     name: "feature 이슈 할당 -> 브랜치-PR 자동 생성"
     runs-on: ubuntu-latest
     if: github.event.action == 'assigned'
     steps:
+      - name: Test GITHUB_TOKEN
+        run: |
+          echo "Testing GITHUB_TOKEN with GitHub API call..."
+          curl -H "Authorization: token $GITHUB_TOKEN" \
+               -H "Accept: application/vnd.github.v3+json" \
+               -s https://api.github.com/repos/${{ github.repository }} | jq '.full_name'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: create the issue branch
         uses: robvanderleek/create-issue-branch@1.7.0
         id: create-issue-branch
